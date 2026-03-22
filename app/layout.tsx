@@ -1,22 +1,16 @@
-export const dynamic = "force-dynamic";
-
 import type { Metadata } from "next";
+import { Poppins } from "next/font/google";
 import {
   ClerkProvider,
   SignedIn,
   UserButton,
 } from "@clerk/nextjs";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const poppins = Poppins({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+  variable: "--font-poppins",
 });
 
 export const metadata: Metadata = {
@@ -34,7 +28,7 @@ export default function RootLayout({
     <ClerkProvider publishableKey="pk_test_YXB0LWdvb3NlLTYuY2xlcmsuYWNjb3VudHMuZGV2JA">
       <html lang="en">
         <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground dark`}
+          className={`${poppins.variable} font-poppins antialiased bg-background text-foreground`}
         >
           <SignedIn>
             <header className="border-b border-border bg-card/60 backdrop-blur-sm">

@@ -1,6 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: ["class"],
   content: [
     './pages/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
@@ -17,6 +16,9 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        'poppins': ['Poppins', 'system-ui', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -51,6 +53,11 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+      },
+      backgroundImage: {
+        'gradient-primary': 'linear-gradient(135deg, #7C3AED, #06B6D4)',
+        'gradient-accent': 'linear-gradient(135deg, #F59E0B, #EF4444)',
+        'gradient-orange': 'linear-gradient(135deg, #FF7A00, #FFB347)',
       },
       borderRadius: {
         lg: "var(--radius)",

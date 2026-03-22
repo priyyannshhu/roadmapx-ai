@@ -10,7 +10,7 @@ export default function SignInPage() {
             <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-xs font-bold text-primary-foreground">
               CC
             </div>
-            <span className="font-semibold tracking-tight">Career Compass AI</span>
+            <span className="font-semibold tracking-tight">RoadmapX AI</span>
           </div>
           <div>
             <h1 className="text-3xl font-bold tracking-tight bg-gradient-to-br from-foreground to-foreground/70 bg-clip-text text-transparent">

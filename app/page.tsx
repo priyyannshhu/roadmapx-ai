@@ -5,7 +5,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { Sparkles, Target } from "lucide-react";
 import {
   Header,
-  JakeChatPanel,
+  JakeChatPanel as PriyanshuChatPanel,
   Navbar,
   OnboardingCard,
   PlanSection,
@@ -36,9 +36,9 @@ function createInitialState(): AppState {
     chat: [
       {
         id: "welcome",
-        from: "jake",
+        from: "priyanshu",
         content:
-          "Hey, I'm Jake—your AI career assistant. Once you create your plan, ask me anything about your next steps.",
+          "Hey, I'm Priyanshu—your AI career assistant. Once you create your plan, ask me anything about your next steps.",
         timestamp: Date.now(),
       },
     ],
@@ -502,7 +502,7 @@ export default function Home() {
           </main>
 
           <aside className="flex w-full shrink-0 lg:w-[420px] xl:w-[460px] lg:pl-4">
-            <JakeChatPanel
+            <PriyanshuChatPanel
               messages={state.chat}
               input={input}
               onInputChange={setInput}
