@@ -1,0 +1,57 @@
+export const dynamic = "force-dynamic";
+
+import type { Metadata } from "next";
+import {
+  ClerkProvider,
+  SignedIn,
+  UserButton,
+} from "@clerk/nextjs";
+import { Geist, Geist_Mono } from "next/font/google";
+import "./globals.css";
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+export const metadata: Metadata = {
+  title: "RoadmapX",
+  description:
+    "Your AI-powered career guide. Get personalized 12-month plans, track progress, and chat with Jake, your 24/7 career assistant.",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <ClerkProvider publishableKey="pk_test_YXB0LWdvb3NlLTYuY2xlcmsuYWNjb3VudHMuZGV2JA">
+      <html lang="en">
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground dark`}
+        >
+          <SignedIn>
+            <header className="border-b border-border bg-card/60 backdrop-blur-sm">
+              <div className="mx-auto flex w-full max-w-[1440px] items-center justify-end gap-2 px-6 py-3 sm:px-10 lg:px-16">
+                <UserButton
+                  appearance={{
+                    elements: {
+                      avatarBox: "w-8 h-8",
+                    },
+                  }}
+                />
+              </div>
+            </header>
+          </SignedIn>
+          {children}
+        </body>
+      </html>
+    </ClerkProvider>
+  );
+}
