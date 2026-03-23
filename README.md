@@ -35,7 +35,7 @@
 
 ### 🤖 **AI-Powered Career Planning**
 - **Personalized 12-Month Roadmaps**: AI-generated plans tailored to your goals
-- **Priyanshu AI Assistant**: Your personal career guide available 24/7
+- **Priyanshu AI Assistant**: Your personal career guide available 24 into 7
 - **Contextual Conversations**: Smart responses based on your current progress
 - **Dynamic Plan Generation**: Adapts to your experience, constraints, and timeline
 
