@@ -33,12 +33,17 @@ export async function POST(request: Request) {
         )
       : 0;
 
-    // Build context for Jake
-    const systemPrompt = `You are Jake, a supportive AI career assistant helping ${
+    // Get current month
+    const currentMonth = new Date().toLocaleString('default', { month: 'long' });
+
+    // Build context for Priyanshu
+    const systemPrompt = `You are Priyanshu, a supportive AI career assistant helping ${
       profile?.name || "someone"
     } transition from ${profile?.currentRole || "their current role"} to ${
       profile?.desiredRole || "their target role"
     }.
+
+IMPORTANT: The current month is ${currentMonth}. Always reference the correct current month in your responses.
 
 Current Context:
 - Time available: ${profile?.timePerWeek || "not specified"}
@@ -63,13 +68,14 @@ Your role:
 - Help them prioritize when overwhelmed
 - Adapt advice to their time constraints
 - Don't repeat yourself - build on previous conversation
+- ALWAYS use the correct current month (${currentMonth}) in your responses
 
 Recent conversation history is provided below.`;
 
     // Format conversation history
     const conversationHistory = messages
       .slice(-6) // Last 6 messages for context
-      .map((m: any) => `${m.from === "user" ? "User" : "Jake"}: ${m.content}`)
+      .map((m: any) => `${m.from === "user" ? "User" : "Priyanshu"}: ${m.content}`)
       .join("\n");
 
     const fullPrompt = `${systemPrompt}
@@ -77,7 +83,7 @@ Recent conversation history is provided below.`;
 Recent conversation:
 ${conversationHistory}
 
-Respond as Jake, keeping your answer helpful, specific, and encouraging.`;
+Respond as Priyanshu, keeping your answer helpful, specific, and encouraging.`;
 
     let reply = "";
     let lastError: unknown = null;

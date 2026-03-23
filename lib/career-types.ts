@@ -36,7 +36,7 @@ export type AppStage = "onboarding" | "plan";
 
 export type ChatMessage = {
   id: string;
-  from: "user" | "jake";
+  from: "user" | "Priyanshu";
   content: string;
   timestamp: number;
 };

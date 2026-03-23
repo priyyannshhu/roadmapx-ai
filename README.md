@@ -26,7 +26,7 @@
 
 ## 🎯 About
 
-RoadmapX is a full-stack web application designed to help professionals navigate their career transitions. Users complete an onboarding process, receive an AI-generated 12-month plan tailored to their goals, and track progress through monthly themes and actionable tasks. The platform features an AI assistant named "Jake" who provides contextual guidance based on the user's current progress and selected month.
+RoadmapX is a full-stack web application designed to help professionals navigate their career transitions. Users complete an onboarding process, receive an AI-generated 12-month plan tailored to their goals, and track progress through monthly themes and actionable tasks. The platform features an AI assistant named "Priyanshu" who provides contextual guidance based on the user's current progress and selected month.
 
 ### Key Highlights
 
@@ -34,7 +34,7 @@ RoadmapX is a full-stack web application designed to help professionals navigate
 - 🔐 **Secure Authentication**: Clerk-based user authentication with keyless development mode
 - 💾 **Persistent Storage**: MongoDB Atlas integration for saving user journeys
 - 📊 **Progress Tracking**: Visual progress indicators for tasks, months, and overall journey
-- 💬 **AI Assistant**: Contextual chat support with Jake, your career assistant
+- 💬 **AI Assistant**: Contextual chat support with Priyanshu, your career assistant
 - 🎨 **Modern UI**: Clean, responsive design built with Next.js and Tailwind CSS
 
 ---
@@ -72,7 +72,7 @@ RoadmapX is a full-stack web application designed to help professionals navigate
   - Aggregate progress across all 12 months
   - Real-time updates as tasks are completed
 
-### 🤖 AI Career Assistant (Jake)
+### 🤖 AI Career Assistant (Priyanshu)
 
 - **Contextual Responses**
   - Understands user profile and current plan
@@ -298,14 +298,14 @@ Generates a personalized 12-month career plan using Gemini AI.
 
 ### POST `/api/chat`
 
-Sends a message to Jake (AI assistant) and receives contextual response.
+Sends a message to Priyanshu (AI assistant) and receives contextual response.
 
 **Request Body:**
 ```json
 {
   "messages": [
     { "from": "user", "content": "How do I start Month 1?" },
-    { "from": "jake", "content": "Great question!..." }
+    { "from": "Priyanshu", "content": "Great question!..." }
   ],
   "profile": {...},
   "plan": {...},
