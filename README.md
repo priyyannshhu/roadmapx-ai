@@ -1,114 +1,93 @@
 # 🚀 RoadmapX
 
-![RoadmapX Banner](public/cca.jpg)
+![RoadmapX Main Interface](images/main.png)
 
-> **AI-powered career planning platform** that helps professionals create and execute personalized 12-month career development roadmaps with intelligent guidance and progress tracking.
+> **AI-powered career planning platform** that transforms your professional journey with personalized 12-month roadmaps, intelligent guidance, and beautiful modern design.
 
 ---
 
 ## 📋 Table of Contents
 
-- [About](#-about)
-- [Features](#-features)
-- [Tech Stack](#-tech-stack)
-- [Architecture](#-architecture)
-- [Getting Started](#-getting-started)
-- [Project Structure](#-project-structure)
-- [API Endpoints](#-api-endpoints)
-- [Environment Variables](#-environment-variables)
-- [Development](#-development)
-- [Deployment](#-deployment)
-- [Troubleshooting](#-troubleshooting)
-- [Contributing](#-contributing)
-- [License](#-license)
-
----
-
-## 🎯 About
-
-RoadmapX is a full-stack web application designed to help professionals navigate their career transitions. Users complete an onboarding process, receive an AI-generated 12-month plan tailored to their goals, and track progress through monthly themes and actionable tasks. The platform features an AI assistant named "Priyanshu" who provides contextual guidance based on the user's current progress and selected month.
-
-### Key Highlights
-
-- ✨ **AI-Powered Planning**: Uses Google Gemini AI to generate personalized career roadmaps
-- 🔐 **Secure Authentication**: Clerk-based user authentication with keyless development mode
-- 💾 **Persistent Storage**: MongoDB Atlas integration for saving user journeys
-- 📊 **Progress Tracking**: Visual progress indicators for tasks, months, and overall journey
-- 💬 **AI Assistant**: Contextual chat support with Priyanshu, your career assistant
-- 🎨 **Modern UI**: Clean, responsive design built with Next.js and Tailwind CSS
+- [✨ Features](#-features)
+- [🎯 About](#-about)
+- [🛠 Tech Stack](#-tech-stack)
+- [🏗 Architecture](#-architecture)
+- [🚀 Getting Started](#-getting-started)
+- [📁 Project Structure](#-project-structure)
+- [🔌 API Endpoints](#-api-endpoints)
+- [🔧 Environment Variables](#-environment-variables)
+- [💻 Development](#-development)
+- [🚢 Deployment](#-deployment)
+- [🐛 Troubleshooting](#-troubleshooting)
+- [🤝 Contributing](#-contributing)
+- [📄 License](#-license)
 
 ---
 
 ## ✨ Features
 
-### 🚀 Onboarding & Plan Generation
+### 🎨 **Professional UI/UX Design**
+- **Modern White + Orange Theme**: Clean, professional interface with vibrant orange accents
+- **Poppins Typography**: Modern, readable font family throughout the application
+- **3-Column Responsive Layout**: Optimized 1:2:1 ratio for perfect space utilization
+- **Smooth Animations**: Hover effects, transitions, and micro-interactions
+- **Mobile-First Design**: Fully responsive across all device sizes
 
-- **User Profile Collection**
-  - Current role and experience level
-  - Desired role/target position
-  - Weekly time availability
-  - Personal constraints and challenges
+### 🤖 **AI-Powered Career Planning**
+- **Personalized 12-Month Roadmaps**: AI-generated plans tailored to your goals
+- **Priyanshu AI Assistant**: Your personal career guide available 24/7
+- **Contextual Conversations**: Smart responses based on your current progress
+- **Dynamic Plan Generation**: Adapts to your experience, constraints, and timeline
 
-- **AI Plan Generation**
-  - 12-month structured roadmap
-  - Monthly themes with clear focus areas
-  - 4 tasks per month (learning, practice, networking, reflection)
-  - Personalized based on user profile and constraints
+### 📊 **Intelligent Progress Tracking**
+- **Task Management**: Three-state lifecycle (not_started → in_progress → complete)
+- **Monthly Themes**: Focused areas like learning, practice, networking, reflection
+- **Visual Progress Bars**: Real-time progress visualization
+- **Weighted Calculations**: In-progress tasks count as 50% completion
 
-### 📈 Progress Tracking
+### 🔐 **Secure Authentication & Data**
+- **Clerk Authentication**: Secure sign-in/sign-up with social providers
+- **MongoDB Persistence**: Automatic state saving and restoration
+- **Session Management**: Seamless user experience across sessions
+- **Data Privacy**: Encrypted storage and secure API communication
 
-- **Task Status Management**
-  - Three-state lifecycle: `not_started` → `in_progress` → `complete`
-  - Weighted progress calculation (in-progress = 50%, complete = 100%)
-  - Visual progress bars for each month
+---
 
-- **Monthly Overview**
-  - Month selection and navigation
-  - Theme summaries and descriptions
-  - Task categorization (learning, practice, networking, reflection)
-  - "Start this month" action for quick initiation
+## 🎯 About
 
-- **Overall Progress**
-  - Aggregate progress across all 12 months
-  - Real-time updates as tasks are completed
+**RoadmapX** is a comprehensive career development platform that helps professionals navigate their career transitions with confidence. Whether you're looking to level up in your current field or pivot to a new role, RoadmapX provides the structure, guidance, and support you need to achieve your goals.
 
-### 🤖 AI Career Assistant (Priyanshu)
+### How It Works
 
-- **Contextual Responses**
-  - Understands user profile and current plan
-  - References selected month and task progress
-  - Provides actionable, encouraging advice
+1. **🎯 Onboarding**: Share your current role, experience, goals, and constraints
+2. **🤖 AI Planning**: Our AI generates a personalized 12-month roadmap
+3. **📈 Execution**: Follow monthly themes and complete actionable tasks
+4. **💬 Guidance**: Get help from Priyanshu, your AI career assistant
+5. **📊 Tracking**: Monitor progress and adapt your plan as needed
 
-- **Conversation History**
-  - Maintains chat context across sessions
-  - Persists messages in MongoDB
-  - Auto-scrolling for new messages
+### Key Benefits
 
-### 🔐 User Authentication & Persistence
-
-- **Clerk Integration**
-  - Secure sign-in/sign-up flows
-  - Custom-styled authentication pages
-  - User session management
-
-- **Data Persistence**
-  - Complete app state saved to MongoDB
-  - Automatic sync on state changes
-  - State restoration on login
+- ✨ **Clarity**: Clear path from where you are to where you want to be
+- 🎯 **Focus**: Monthly themes prevent overwhelm and maintain momentum
+- 🤝 **Support**: AI assistant provides personalized guidance
+- 📊 **Accountability**: Progress tracking keeps you motivated
+- 🔄 **Flexibility**: Adapt plans as your goals evolve
 
 ---
 
 ## 🛠 Tech Stack
 
-### Frontend
+### Frontend Technologies
 
 | Technology | Version | Purpose |
 |------------|---------|---------|
-| **Next.js** | 16.1.6 | React framework with App Router |
-| **React** | 19.2.3 | UI library |
-| **TypeScript** | 5.x | Type-safe JavaScript |
-| **Tailwind CSS** | 4.x | Utility-first CSS framework |
-| **Lucide React** | Latest | Icon library |
+| **Next.js** | 16.1.6 | React framework with App Router & Turbopack |
+| **React** | 19.2.3 | UI library with modern hooks |
+| **TypeScript** | 5.x | Type-safe development |
+| **Tailwind CSS** | 3.4.19 | Utility-first styling framework |
+| **Poppins** | Custom | Modern typography |
+| **Lucide React** | 0.563.0 | Beautiful icon library |
+| **shadcn/ui** | 3.8.4 | High-quality UI components |
 
 ### Backend & Services
 
@@ -116,15 +95,15 @@ RoadmapX is a full-stack web application designed to help professionals navigate
 |------------|---------|---------|
 | **Clerk** | 6.37.4 | Authentication & user management |
 | **Google Gemini AI** | 1.41.0 | AI plan generation & chat responses |
-| **MongoDB** | 7.1.0 | Database for user state persistence |
+| **MongoDB** | 7.1.0 | NoSQL database for state persistence |
 | **Next.js API Routes** | Built-in | Server-side API endpoints |
 
 ### Development Tools
 
-- **ESLint** - Code linting
-- **TypeScript** - Type checking
-- **Tailwind CSS PostCSS** - CSS processing
-- **shadcn/ui** - UI component library
+- **ESLint** - Code quality and linting
+- **TypeScript** - Static type checking
+- **PostCSS** - CSS processing and optimization
+- **Tailwind Animate** - Smooth animations and transitions
 
 ---
 
@@ -132,21 +111,29 @@ RoadmapX is a full-stack web application designed to help professionals navigate
 
 ### Application Flow
 
-```
-User → Clerk Auth → Onboarding → AI Plan Generation → Progress Tracking → AI Chat
-  ↓                    ↓              ↓                      ↓                ↓
-MongoDB ← State Sync ← State Sync ← State Sync ← State Sync ← State Sync
+```mermaid
+graph TD
+    A[User] --> B[Clerk Auth]
+    B --> C[Onboarding Form]
+    C --> D[AI Plan Generation]
+    D --> E[Progress Tracking]
+    E --> F[Priyanshu Chat]
+    F --> E
+    
+    G[MongoDB] <--> B
+    G <--> C
+    G <--> D
+    G <--> E
+    G <--> F
 ```
 
-### Data Flow
+### Data Flow Architecture
 
-1. **Authentication**: User signs in via Clerk
-2. **Onboarding**: User profile collected and sent to `/api/plan`
-3. **Plan Generation**: Gemini AI generates 12-month plan
-4. **State Management**: Plan saved to MongoDB via `/api/state`
-5. **Progress Updates**: Task status changes trigger state sync
-6. **AI Chat**: Messages sent to `/api/chat` with full context
-7. **Persistence**: All state changes auto-saved to MongoDB
+1. **Authentication Layer**: Clerk handles user identity and sessions
+2. **API Layer**: Next.js API routes process all business logic
+3. **AI Layer**: Google Gemini generates personalized content
+4. **Data Layer**: MongoDB persists user state and conversations
+5. **UI Layer**: React components render the user interface
 
 ### Database Schema
 
@@ -157,10 +144,10 @@ MongoDB ← State Sync ← State Sync ← State Sync ← State Sync ← State Sy
   userId: string,           // Clerk user ID
   state: {
     stage: "onboarding" | "plan",
-    profile: UserProfile,
-    plan: Plan,
+    profile: UserProfile,    // User career information
+    plan: Plan,             // 12-month career roadmap
     selectedMonthId: string | null,
-    chat: ChatMessage[]
+    chat: ChatMessage[]     // Conversation history
   },
   createdAt: Date,
   updatedAt: Date
@@ -174,17 +161,17 @@ MongoDB ← State Sync ← State Sync ← State Sync ← State Sync ← State Sy
 ### Prerequisites
 
 - **Node.js** 18+ and npm
-- **MongoDB Atlas** account (free tier works)
+- **MongoDB Atlas** account (free tier available)
 - **Google AI Studio** account for Gemini API key
-- **Clerk** account (optional - keyless mode works for dev)
+- **Clerk** account (optional - keyless mode works for development)
 
-### Installation
+### Quick Start
 
 1. **Clone the repository**
 
 ```bash
-git clone <repository-url>
-cd RoadmapXAI
+git clone https://github.com/priyyannshhu/roadmapx-ai.git
+cd roadmapx-ai
 ```
 
 2. **Install dependencies**
@@ -198,16 +185,20 @@ npm install
 Create a `.env.local` file in the project root:
 
 ```bash
-# Gemini AI Configuration
+# Google Gemini AI
 GEMINI_API_KEY=your_gemini_api_key_here
 
-# MongoDB Configuration
-MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/?appName=Cluster0
-MONGODB_DB_NAME=roadmap_x
+# MongoDB Atlas
+MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/roadmapx?appName=Cluster0
+MONGODB_DB_NAME=roadmapx
 
-# Clerk Configuration (Optional for development - uses keyless mode if not set)
-# NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_...
-# CLERK_SECRET_KEY=sk_test_...
+# Clerk Authentication (Optional for development)
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_your_publishable_key
+CLERK_SECRET_KEY=sk_test_your_secret_key
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/
+NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/
 ```
 
 4. **Run the development server**
@@ -222,36 +213,37 @@ Navigate to [http://localhost:3000](http://localhost:3000)
 
 ---
 
-## Project Structure
+## 📁 Project Structure
 
 ```
-RoadmapXAI/
+roadmapx-ai/
 ├── app/
 │   ├── api/
-│   │   ├── chat/
-│   │   │   └── route.ts          # AI chat endpoint
-│   │   ├── plan/
-│   │   │   └── route.ts          # Plan generation endpoint
-│   │   └── state/
-│   │       └── route.ts          # State persistence endpoint
-│   ├── sign-in/
-│   │   └── [[...sign-in]]/
-│   │       └── page.tsx          # Custom sign-in page
-│   ├── sign-up/
-│   │   └── [[...sign-up]]/
-│   │       └── page.tsx          # Custom sign-up page
-│   ├── layout.tsx                 # Root layout with ClerkProvider
-│   ├── page.tsx                  # Main application page
-│   └── globals.css               # Global styles
+│   │   ├── chat/route.ts          # AI chat endpoint
+│   │   ├── plan/route.ts          # Plan generation endpoint
+│   │   └── state/route.ts         # State persistence endpoint
+│   ├── sign-in/[[...sign-in]]/
+│   │   └── page.tsx              # Custom sign-in page
+│   ├── sign-up/[[...sign-up]]/
+│   │   └── page.tsx              # Custom sign-up page
+│   ├── globals.css               # Global styles with Poppins font
+│   ├── layout.tsx                # Root layout with ClerkProvider
+│   └── page.tsx                  # Main application page
+├── components/
+│   └── home/
+│       └── sections.tsx          # Main UI components
 ├── lib/
-│   ├── mongodb.ts                # MongoDB connection helper
-│   └── utils.ts                  # Utility functions
+│   ├── career-types.ts           # TypeScript type definitions
+│   └── mongodb.ts                # MongoDB connection helper
+├── images/
+│   └── main.png                  # Main application screenshot
 ├── public/
-│   └── cca.jpg                   # Project banner image
-├── middleware.ts                  # Clerk middleware
-├── package.json                   # Dependencies
-├── tsconfig.json                  # TypeScript configuration
-└── README.md                      # This file
+│   └── ...                       # Static assets
+├── middleware.ts                 # Clerk authentication middleware
+├── tailwind.config.js            # Tailwind CSS configuration
+├── next.config.ts                # Next.js configuration
+├── package.json                  # Dependencies and scripts
+└── README.md                     # This file
 ```
 
 ---
@@ -262,17 +254,17 @@ RoadmapXAI/
 
 Generates a personalized 12-month career plan using Gemini AI.
 
-**Request Body:**
+**Request:**
 ```json
 {
   "profile": {
-    "name": "John Doe",
-    "currentRole": "Software Engineer",
-    "yearsExperience": "3",
-    "desiredRole": "Senior Software Engineer",
-    "timePerWeek": "5-8 hours",
-    "constraints": "Full-time job, family",
-    "challenges": "Time management, confidence"
+    "name": "Sarah Johnson",
+    "currentRole": "Frontend Developer",
+    "yearsExperience": "2",
+    "desiredRole": "Senior Frontend Engineer",
+    "timePerWeek": "6-10 hours",
+    "constraints": "Full-time job, learning new tech stack",
+    "challenges": "Imposter syndrome, time management"
   }
 }
 ```
@@ -287,9 +279,38 @@ Generates a personalized 12-month career plan using Gemini AI.
         "id": "month-1",
         "index": 1,
         "title": "Month 1",
-        "theme": "Foundations & Clarity",
-        "summary": "Establish a strong base...",
-        "tasks": [...]
+        "theme": "Foundation Building",
+        "summary": "Strengthen core frontend fundamentals",
+        "tasks": [
+          {
+            "id": "m1-t1",
+            "title": "Master React Hooks",
+            "description": "Deep dive into useState, useEffect, and custom hooks",
+            "category": "learning",
+            "status": "not_started"
+          },
+          {
+            "id": "m1-t2",
+            "title": "Build Component Library",
+            "description": "Create reusable components for your portfolio",
+            "category": "practice",
+            "status": "not_started"
+          },
+          {
+            "id": "m1-t3",
+            "title": "Join React Community",
+            "description": "Connect with other developers and learn from them",
+            "category": "networking",
+            "status": "not_started"
+          },
+          {
+            "id": "m1-t4",
+            "title": "Weekly Progress Journal",
+            "description": "Document your learning journey and insights",
+            "category": "reflection",
+            "status": "not_started"
+          }
+        ]
       }
     ]
   }
@@ -298,17 +319,17 @@ Generates a personalized 12-month career plan using Gemini AI.
 
 ### POST `/api/chat`
 
-Sends a message to Priyanshu (AI assistant) and receives contextual response.
+Interacts with Priyanshu AI assistant for career guidance.
 
-**Request Body:**
+**Request:**
 ```json
 {
   "messages": [
-    { "from": "user", "content": "How do I start Month 1?" },
-    { "from": "Priyanshu", "content": "Great question!..." }
+    { "from": "user", "content": "How should I prioritize my tasks this month?" },
+    { "from": "priyanshu", "content": "Great question! Let me help you prioritize..." }
   ],
-  "profile": {...},
-  "plan": {...},
+  "profile": { ... },
+  "plan": { ... },
   "selectedMonthId": "month-1"
 }
 ```
@@ -316,7 +337,7 @@ Sends a message to Priyanshu (AI assistant) and receives contextual response.
 **Response:**
 ```json
 {
-  "reply": "To start Month 1, focus on..."
+  "reply": "Based on your current progress in Month 1, I recommend starting with the React Hooks deep dive since it's foundational for the other tasks. Spend 60% of your time there, then move to building your component library..."
 }
 ```
 
@@ -329,35 +350,28 @@ Retrieves saved user state from MongoDB.
 {
   "state": {
     "stage": "plan",
-    "profile": {...},
-    "plan": {...},
+    "profile": { ... },
+    "plan": { ... },
     "selectedMonthId": "month-1",
-    "chat": [...]
+    "chat": [ ... ]
   }
 }
 ```
 
 ### POST `/api/state`
 
-Saves user state to MongoDB.
+Saves user state to MongoDB for persistence.
 
-**Request Body:**
+**Request:**
 ```json
 {
   "state": {
     "stage": "plan",
-    "profile": {...},
-    "plan": {...},
+    "profile": { ... },
+    "plan": { ... },
     "selectedMonthId": "month-1",
-    "chat": [...]
+    "chat": [ ... ]
   }
-}
-```
-
-**Response:**
-```json
-{
-  "ok": true
 }
 ```
 
@@ -367,11 +381,11 @@ Saves user state to MongoDB.
 
 | Variable | Required | Description | Example |
 |----------|----------|-------------|---------|
-| `GEMINI_API_KEY` | Yes | Google Gemini API key | `AIzaSy...` |
-| `MONGODB_URI` | Yes | MongoDB Atlas connection string | `mongodb+srv://...` |
-| `MONGODB_DB_NAME` | No | Database name (default: `career_compass_ai`) | `career_compass_ai` |
-| `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY` | No* | Clerk publishable key | `pk_test_...` |
-| `CLERK_SECRET_KEY` | No* | Clerk secret key | `sk_test_...` |
+| `GEMINI_API_KEY` | ✅ Yes | Google Gemini API key for AI features | `AIzaSy...` |
+| `MONGODB_URI` | ✅ Yes | MongoDB Atlas connection string | `mongodb+srv://...` |
+| `MONGODB_DB_NAME` | ❌ No | Database name (default: `roadmapx`) | `roadmapx` |
+| `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY` | ❌ No* | Clerk publishable key | `pk_test_...` |
+| `CLERK_SECRET_KEY` | ❌ No* | Clerk secret key | `sk_test_...` |
 
 *Clerk keys are optional in development - the app uses keyless mode if not provided.
 
@@ -382,33 +396,34 @@ Saves user state to MongoDB.
 ### Available Scripts
 
 ```bash
-# Start development server
+# Start development server with hot reload
 npm run dev
 
-# Build for production
+# Build optimized production version
 npm run build
 
 # Start production server
 npm start
 
-# Run linter
+# Run ESLint for code quality
 npm run lint
 ```
 
 ### Development Workflow
 
-1. **Make changes** to code
-2. **Hot reload** automatically updates the browser
-3. **Check console** for errors and API responses
-4. **Test authentication** flow with Clerk
-5. **Verify MongoDB** connection and data persistence
+1. **Code Changes**: Make changes to components, styles, or logic
+2. **Hot Reload**: Browser automatically updates with changes
+3. **API Testing**: Check browser console for API responses
+4. **Authentication**: Test sign-in/sign-up flows
+5. **Database**: Verify MongoDB connection and data persistence
 
-### Code Style
+### Code Style Guidelines
 
-- TypeScript strict mode enabled
-- ESLint configured for Next.js
-- Tailwind CSS for styling
-- Functional components with hooks
+- **TypeScript Strict Mode**: All code must be type-safe
+- **Component Structure**: Functional components with hooks
+- **Tailwind CSS**: Utility-first styling approach
+- **File Organization**: Logical grouping by feature
+- **Error Handling**: Proper try-catch blocks and user feedback
 
 ---
 
@@ -416,82 +431,158 @@ npm run lint
 
 ### Vercel (Recommended)
 
-1. Push your code to GitHub
-2. Import project in Vercel
-3. Add environment variables in Vercel dashboard
-4. Deploy automatically on push
+1. **Push to GitHub**
+   ```bash
+   git add .
+   git commit -m "Ready for deployment"
+   git push origin main
+   ```
 
-### Other Platforms
+2. **Import in Vercel**
+   - Go to [vercel.com](https://vercel.com)
+   - Click "New Project"
+   - Import your GitHub repository
+   - Vercel auto-detects Next.js settings
 
-The app can be deployed to any platform supporting Next.js:
+3. **Configure Environment Variables**
+   Add all required variables in Vercel dashboard:
+   - `GEMINI_API_KEY`
+   - `MONGODB_URI`
+   - `MONGODB_DB_NAME`
+   - Clerk keys (if using production auth)
 
-- **Netlify** - Configure build command: `npm run build`
-- **Railway** - Automatic deployment from Git
-- **AWS Amplify** - Full-stack deployment
-- **Docker** - Containerized deployment
+4. **Deploy**
+   - Click "Deploy"
+   - Wait for build completion
+   - Visit your deployed URL
 
-### Environment Variables for Production
+### Other Deployment Options
 
-Ensure all required environment variables are set in your deployment platform:
+**Netlify**
+```bash
+# Build command
+npm run build
 
-- `GEMINI_API_KEY`
-- `MONGODB_URI`
-- `MONGODB_DB_NAME`
-- `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY`
-- `CLERK_SECRET_KEY`
+# Publish directory
+.out
+```
+
+**Docker**
+```bash
+# Build image
+docker build -t roadmapx .
+
+# Run container
+docker run -p 3000:3000 roadmapx
+```
+
+**AWS Amplify**
+- Connect GitHub repository
+- Configure build settings
+- Deploy automatically on push
 
 ---
 
 ## 🐛 Troubleshooting
 
-### MongoDB Connection Issues
+### Common Issues
 
-**Error: "Invalid MONGODB_URI"**
-- Ensure URI starts with `mongodb://` or `mongodb+srv://`
-- Remove any prefixes like "connections:" or quotes
-- Verify credentials are correct
+**MongoDB Connection Error**
+```bash
+# Check connection string format
+mongodb+srv://username:password@cluster.mongodb.net/dbname
 
-**Error: "SSL/TLS connection error"**
-- Check MongoDB Atlas Network Access settings
-- Add your IP address or `0.0.0.0/0` for development
-- Verify database user has read/write permissions
+# Ensure IP is whitelisted in MongoDB Atlas
+# Add 0.0.0.0/0 for development access
+```
 
-### Gemini AI Issues
+**Gemini API Issues**
+```bash
+# Verify API key is valid
+curl "https://generativelanguage.googleapis.com/v1beta/models" -H "x-goog-api-key: YOUR_KEY"
 
-**Error: "API key must be set"**
-- Verify `GEMINI_API_KEY` is in `.env.local`
-- Restart dev server after adding environment variables
-- Check API key is valid in Google AI Studio
+# Check rate limits and quotas in Google AI Studio
+```
 
-**Error: "Model not found"**
-- The app automatically falls back to alternative models
-- Check Gemini API status and model availability
+**Clerk Authentication**
+```bash
+# Verify middleware configuration
+cat middleware.ts
 
-### Clerk Authentication Issues
+# Check ClerkProvider in layout.tsx
+grep -n "ClerkProvider" app/layout.tsx
+```
 
-**Keyless mode not working**
-- Ensure `@clerk/nextjs` is installed
-- Check `middleware.ts` is properly configured
-- Verify `ClerkProvider` wraps the app in `layout.tsx`
+**Build Errors**
+```bash
+# Clear Next.js cache
+rm -rf .next
+
+# Reinstall dependencies
+rm -rf node_modules package-lock.json
+npm install
+
+# Check TypeScript errors
+npm run build
+```
+
+### Performance Optimization
+
+- **Image Optimization**: Use Next.js Image component
+- **Code Splitting**: Dynamic imports for large components
+- **Database Indexing**: Add indexes for frequently queried fields
+- **API Caching**: Implement response caching where appropriate
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please follow these steps:
+We welcome contributions! Here's how to get started:
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+### Development Setup
+
+1. **Fork the repository**
+2. **Clone your fork**
+   ```bash
+   git clone https://github.com/your-username/roadmapx-ai.git
+   cd roadmapx-ai
+   ```
+
+3. **Create feature branch**
+   ```bash
+   git checkout -b feature/amazing-feature
+   ```
+
+4. **Make changes and test**
+   ```bash
+   npm run dev
+   # Test thoroughly
+   npm run build
+   ```
+
+5. **Submit pull request**
+   ```bash
+   git add .
+   git commit -m "Add amazing feature"
+   git push origin feature/amazing-feature
+   ```
 
 ### Contribution Guidelines
 
-- Follow existing code style
-- Add TypeScript types for new features
-- Update README if adding new features
-- Test thoroughly before submitting PR
+- **Code Quality**: Follow existing patterns and TypeScript best practices
+- **Testing**: Ensure all features work before submitting
+- **Documentation**: Update README for new features
+- **UI/UX**: Maintain design consistency with existing interface
+- **Performance**: Consider impact on load times and user experience
+
+### Areas for Contribution
+
+- 🎨 **UI Improvements**: Enhanced animations, better accessibility
+- 🤖 **AI Features**: Better prompt engineering, new AI capabilities
+- 📊 **Analytics**: Progress insights, achievement systems
+- 🔧 **Performance**: Optimization, caching strategies
+- 📱 **Mobile**: Enhanced mobile experience
+- 🌐 **Internationalization**: Multi-language support
 
 ---
 
@@ -499,22 +590,37 @@ Contributions are welcome! Please follow these steps:
 
 This project is private and proprietary. All rights reserved.
 
+© 2024 RoadmapX. Built with ❤️ for career development professionals.
+
 ---
 
 ## 🙏 Acknowledgments
 
+Special thanks to:
+
 - **Google Gemini AI** for powerful AI capabilities
-- **Clerk** for seamless authentication
-- **MongoDB Atlas** for reliable data storage
-- **Next.js** team for the amazing framework
+- **Clerk** for seamless authentication solutions
+- **MongoDB Atlas** for reliable database services
+- **Next.js Team** for the amazing framework
 - **Tailwind CSS** for beautiful styling utilities
+- **Vercel** for excellent deployment platform
 
 ---
 
-## 📞 Support
+## 📞 Support & Contact
 
-For issues, questions, or feature requests, please open an issue in the repository.
+For issues, questions, or feature requests:
+
+- 🐛 **Report Issues**: [GitHub Issues](https://github.com/priyyannshhu/roadmapx-ai/issues)
+- 💬 **Discussions**: [GitHub Discussions](https://github.com/priyyannshhu/roadmapx-ai/discussions)
+- 📧 **Email**: Contact through GitHub profile
 
 ---
 
-Built with ❤️ using Next.js, Gemini AI, Clerk, and MongoDB
+## 🚀 Live Demo
+
+Experience RoadmapX in action at: **[Coming Soon]**
+
+---
+
+*Built with cutting-edge technology to transform your career journey.* 🎯
